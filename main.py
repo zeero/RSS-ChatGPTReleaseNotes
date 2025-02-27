@@ -16,7 +16,7 @@ def fetch_release_notes():
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
         })
         page.goto(FEED_URL)
-        page.wait_for_selector("article", timeout=60000)
+        page.wait_for_selector("article", timeout=120000)
 
         articles = page.locator("article").first.locator("h2").all()
         items = []
